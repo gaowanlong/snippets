@@ -1,0 +1,19 @@
+[user]
+	email		= gaowanlong@cn.fujitsu.com
+	name		= Wanlong Gao
+[sendemail]
+	from		= Wanlong Gao <gaowanlong@cn.fujitsu.com>
+	smtpuser	= gaowanlong@cn.fujitsu.com
+	#smtppass	= 
+	smtpserver	= smtp.fnst.cn.fujitsu.com
+	smtpencryption	= plain
+	envelopesender	= auto
+	suppresscc	= author
+	confirm		= always
+[color]
+	diff		= true
+[format]
+	numbered = auto
+	signoff = true
+
+[core]
