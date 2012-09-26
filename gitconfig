@@ -4,7 +4,7 @@
 [sendemail]
 	from		= Wanlong Gao <gaowanlong@cn.fujitsu.com>
 	smtpuser	= gaowanlong@cn.fujitsu.com
-	#smtppass	= 
+	#smtppass	=
 	smtpserver	= smtp.fnst.cn.fujitsu.com
 	smtpencryption	= plain
 	envelopesender	= auto
@@ -16,4 +16,5 @@
 	numbered = auto
 	signoff = true
 
-[core]
+[push]
+	default = simple
