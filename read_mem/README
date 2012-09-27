@@ -1,3 +1,44 @@
+/proc/$pid/maps
+
+/proc/$pid/mem shows the contents of $pid's memory mapped the same way as in the process, i.e., the byte at offset x in the pseudo-file is the same as the byte at address x in the process. If an address is unmapped in the process, reading from the corresponding offset in the file returns EIO (Input/output error). For example, since the first page in a process is never mapped (so that dereferencing a NULL pointer fails cleanly rather than unintendedly accessing actual memory), reading the first byte of /proc/$pid/mem always yield an I/O error.
+
+The way to find out what parts of the process memory are mapped is to read /proc/$pid/maps. This file contains one line per mapped region, looking like this:
+
+08048000-08054000 r-xp 00000000 08:01 828061     /bin/cat
+08c9b000-08cbc000 rw-p 00000000 00:00 0          [heap]
+
+The first two numbers are the boundaries of the region (addresses of the first byte and the byte after last, in hexa). The next column contain the permissions, then there's some information about the file (offset, device, inode and name) if this is a file mapping. See the proc(5) man page or Understanding Linux /proc/id/maps for more information.
+
+Here's a proof-of-concept script that dumps the contents of its own memory.
+
+#! /usr/bin/env python
+import re
+maps_file = open("/proc/self/maps", 'r')
+mem_file = open("/proc/self/mem", 'r', 0)
+for line in maps_file.readlines():  # for each mapped region
+    m = re.match(r'([0-9A-Fa-f]+)-([0-9A-Fa-f]+) ([-r])', line)
+    if m.group(3) == 'r':  # if this is a readable region
+        start = int(m.group(1), 16)
+        end = int(m.group(2), 16)
+        mem_file.seek(start)  # seek to region start
+        chunk = mem_file.read(end - start)  # read region contents
+        print chunk,  # dump contents to standard output
+maps_file.close()
+mem_file.close()
+
+/proc/$pid/mem
+
+If you try to read from the mem pseudo-file of another process, it doesn't work: you get an ESRCH (No such process) error.
+
+The permissions on /proc/$pid/mem (r--------) are more liberal than what should be the case. For example, you shouldn't be able to read a setuid process's memory. Furthermore, trying to read a process's memory while the process is modifying it could give the reader an inconsistent view of the memory, and worse, there were race conditions that could trace older versions of the Linux kernel (according to this lkml thread, though I don't know the details). So additional checks are needed:
+
+    The process that wants to read from /proc/$pid/mem must attach to the process using ptrace with the PTRACE_ATTACH flag. This is what debuggers do when they start debugging a process; it's also what strace does to a process's system calls. Once the reader has finished reading from /proc/$pid/mem, it should detach by calling ptrace with the PTRACE_DETACH flag.
+    The observed process must not be running. Normally calling ptrace(PTRACE_ATTACH, …) will stop the target process (it sends a STOP signal), but there is a race condition (signal delivery is asynchronous), so the tracer should call wait (as documented in ptrace(2)).
+
+A process running as root can read any process's memory, without needing to call ptrace, but the observed process must be stopped, or the read will still return ESRCH.
+
+In the Linux kernel source, the code providing per-process entries in /proc is in fs/proc/base.c, and the function to read from /proc/$pid/mem is mem_read. The additional check is performed by check_mem_permission.
+
 Each row in /proc/$PID/maps describes a region of contiguous virtual memory in a process or thread. Each row has the following fields:
 
     address - This is the starting and ending address of the region in the process's address space
