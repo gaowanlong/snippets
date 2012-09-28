@@ -49,7 +49,7 @@ Each row in /proc/$PID/maps describes a region of contiguous virtual memory in a
     pathname - If the region was mapped from a file, this is the name of the file. This field is blank for anonymous mapped regions. There are also special regions with names like [heap], [stack], or [vdso]. [vdso] stands for virtual dynamic shared object. It's used by system calls to switch to kernel mode.
 
 
-http://www.trilithium.com/johan/2005/08/linux-gate/
+below refer to: http://www.trilithium.com/johan/2005/08/linux-gate/
 
 What is linux-gate.so.1?
 When you use the ldd utility on a reasonably recent Linux system you'll frequently see a reference to an ethereal entity known as linux-gate.so.1:
