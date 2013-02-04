@@ -11,6 +11,7 @@
 	suppresscc	= author
 	confirm		= always
 [color]
+	ui		= true
 	diff		= true
 [format]
 	numbered = auto
@@ -18,3 +19,5 @@
 
 [push]
 	default = simple
+[diff]
+	renames = true
