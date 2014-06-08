@@ -3,10 +3,11 @@
 	name		= Wanlong Gao
 [sendemail]
 	from		= Wanlong Gao <gaowanlong@cn.fujitsu.com>
-	smtpuser	= gaowanlong@cn.fujitsu.com
+	smtpuser	= gaowanlong
 	#smtppass	=
-	smtpserver	= smtp.fnst.cn.fujitsu.com
-	smtpencryption	= plain
+	smtpsslcertpath = "/path/to/fj_ca.crt"
+	smtpserver	= pekd01.exch.g08.fujitsu.local
+	smtpencryption	= tls
 	envelopesender	= auto
 	suppresscc	= author
 	confirm		= always
