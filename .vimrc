@@ -55,13 +55,48 @@ Plugin 'kien/ctrlp.vim'
 " " see :h vundle for more details or wiki for FAQ
 " " Put your non-Plugin stuff after this line
 
-" airline
-" Add powerline patched fonts
-" git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-
 " tomasr/molokai
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
+
+" airline
+" Add powerline patched fonts
+" git clone https://github.com/powerline/fonts.git && cd fonts && ./install.sh
+let g:airline_powerline_fonts = 1
+" set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
+" set guifont=Literation\ Mono\ Powerline\ 9
+set guifont=Dejavu\ Sans\ Mono\ for\ Powerline\ 9
+let g:airline_detect_paste=1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_nr = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
+nmap <leader>2 <Plug>AirlineSelectTab2
+nmap <leader>3 <Plug>AirlineSelectTab3
+nmap <leader>4 <Plug>AirlineSelectTab4
+nmap <leader>5 <Plug>AirlineSelectTab5
+nmap <leader>6 <Plug>AirlineSelectTab6
+nmap <leader>7 <Plug>AirlineSelectTab7
+nmap <leader>8 <Plug>AirlineSelectTab8
+nmap <leader>9 <Plug>AirlineSelectTab9
+let g:airline#extensions#tabline#show_close_button = 1
+let g:airline#extensions#tabline#close_symbol = 'X'
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tagbar#flags = 'f'
+
+" normal setup
+set gcr=a:block-blinkon0
+set nu
+"if has("gui_running")
+"  set guifont=Monospace\ 9
+"endif
+if &t_Co > 2 || has("gui_running")
+  set hlsearch
+  set incsearch
+endif
+set tw=0 " do not break my line
