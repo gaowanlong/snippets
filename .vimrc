@@ -98,5 +98,7 @@ set nu
 if &t_Co > 2 || has("gui_running")
   set hlsearch
   set incsearch
+  set guioptions-=m
+  set guioptions-=T
 endif
 set tw=0 " do not break my line
