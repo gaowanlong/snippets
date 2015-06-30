@@ -3,6 +3,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+" should manually install Vundle.vim first
+" $ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 " set the runtime path to include Vundle and initialize
  set rtp+=~/.vim/bundle/Vundle.vim
  call vundle#begin()
@@ -20,6 +22,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'kien/ctrlp.vim'
+Plugin 'fatih/vim-go'
 "
 "
 " " The following are examples of different formats supported.
