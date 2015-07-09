@@ -23,6 +23,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'chazy/cscope_maps'
 "
 "
 " " The following are examples of different formats supported.
@@ -109,3 +110,5 @@ if &t_Co > 2 || has("gui_running")
   set lines=999 columns=999
 endif
 set tw=0 " do not break my line
+set colorcolumn=80
+"set spell " enable spell check, disable by set nospell
