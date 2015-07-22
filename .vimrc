@@ -24,6 +24,7 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'chazy/cscope_maps'
+Plugin 'mbbill/fencview'
 "
 "
 " " The following are examples of different formats supported.
@@ -95,6 +96,10 @@ let g:airline#extensions#tagbar#flags = 'f'
 
 " ctrlp setup
 let g:ctrlp_working_path_mode = 'a'
+
+" fencview setup detect file encoding
+" if detect failed, use :FencView to selete
+let g:fencview_autodetect = 1
 
 " normal setup
 set gcr=a:block-blinkon0
