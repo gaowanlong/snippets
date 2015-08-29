@@ -1,12 +1,12 @@
 [user]
-	email		= gaowanlong@cn.fujitsu.com
+	email		= wanlong.gao@gmail.com
 	name		= Wanlong Gao
 [sendemail]
-	from		= Wanlong Gao <gaowanlong@cn.fujitsu.com>
-	smtpuser	= gaowanlong
-	#smtppass	=
-	smtpsslcertpath = "/path/to/fj_ca.crt"
-	smtpserver	= pekd01.exch.g08.fujitsu.local
+	from		= Wanlong Gao <wanlong.gao@gmail.com>
+	smtpuser	= wanlong.gao
+	smtppass	=
+	smtpsslcertpath =
+	smtpserver	=
 	smtpencryption	= tls
 	envelopesender	= auto
 	suppresscc	= author
