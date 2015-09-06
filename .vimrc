@@ -107,7 +107,7 @@ if &t_Co > 2 || has("gui_running")
   set incsearch
   set guioptions-=m
   set guioptions-=T
-  set lines=999 columns=999
+  "set lines=999 columns=999
 endif
 set tw=0 " do not break my line
 set colorcolumn=80
