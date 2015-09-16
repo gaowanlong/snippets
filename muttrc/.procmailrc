@@ -1,0 +1,30 @@
+PATH=$HOME/bin:/usr/bin:/usr/ucb:/bin:/usr/local/bin:.
+MAILDIR=$HOME/Mail
+DEFAULT=$MAILDIR/mbox
+LOGFILE=$MAILDIR/from
+LOCKFILE=$HOME/.lockmail
+
+
+:0
+* (^From|^TO|^CC).*wanlong.gao@gmail.com
+gmail
+
+:0
+* (^TO|^CC).*ltp-list
+LTP
+
+:0
+* (^TO|^CC).*ltp@lists.linux.it
+LTP
+
+:0
+* (^From|^TO|^CC).*g@allenx.org
+allenx
+
+:0
+* (^TO|^CC).*lengyuex@vip.qq.com
+qq
+
+:0
+* .* mbox
+default

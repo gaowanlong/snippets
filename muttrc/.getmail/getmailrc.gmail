@@ -1,0 +1,19 @@
+[options]
+verbose = 2
+# only get mail
+read_all = false
+# do not delete from server
+delete = false
+
+[retriever]
+type = SimplePOP3SSLRetriever
+server = pop.gmail.com
+port = 995
+username = recent:wanlong.gao@gmail.com
+password = xxxxx
+
+[destination]
+# use procmail to pick mail
+type = MDA_external
+path = /usr/local/bin/procmail
+unixfrom = true

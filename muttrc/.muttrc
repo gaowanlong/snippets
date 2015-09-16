@@ -1,0 +1,38 @@
+set folder = "~/Mail"
+set mbox = "~/Mail/mbox"
+set record = "~/Mail/from"
+set spoolfile = "~/Mail/gmail"
+
+set sort = threads
+set sort_aux = reverse-last-date-received
+set editor = "/usr/bin/vim"
+set sendmail = "/usr/local/bin/proxychains4 /usr/local/bin/msmtp"
+# work with ~/.mailcap
+auto_view text/html
+
+
+set charset = "utf-8"
+set send_charset = "utf-8"
+charset-hook ^us-ascii$ gb2312
+charset-hook ^big5$ big5
+charset-hook !utf-8 gb2312
+set assumed_charset = "gb2312"
+set rfc2047_parameters = yes
+
+set quit = ask-yes
+set header = no
+set indent_str = "> "
+
+set realname = "Wanlong Gao"
+set from = "Wanlong Gao <wanlong.gao@gmail.com>"
+set use_from = yes
+
+# able to switch from account
+set envelope_from = yes
+# Alt+2 switch to one mail
+macro generic "<esc>2" ":set from='Wanlong Gao <g@allenx.org>'"
+# Alt+1 switch to gmail
+macro generic "<esc>1" ":set from='Wanlong Gao <wanlong.gao@gmail.com>'"
+
+source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt/mutt-patch-highlighting.muttrc
