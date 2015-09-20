@@ -99,7 +99,8 @@ hdr_order "Date:" "To:" "Cc:" "From:" "Subject:" "User-Agent:" "X-Mailer:"
 auto_view text/html
 auto_view image/*
 
-source ~/.mutt-rc/mutt-colors-solarized-dark-256.muttrc
+#source ~/.mutt-rc/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt-rc/vombatidae.muttrc
 source ~/.mutt-rc/mutt-patch-highlighting.muttrc
 source ~/.mutt-rc/mutt_aliases
 
