@@ -1,0 +1,7 @@
+alias libvirt-list libvir-list <libvir-list@redhat.com>
+alias qemu-devel-list qemu-devel-list <qemu-devel@nongnu.org>
+alias lkml lkml <linux-kernel@vger.kernel.org>
+
+alias akpm Andrew Morton <akpm@linux-foundation.org>
+alias rusty.russell Rusty Russell <rusty@rustcorp.com.au>
+alias tejun.heo Tejun Heo <tj@kernel.org>

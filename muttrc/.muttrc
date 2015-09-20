@@ -1,38 +1,169 @@
 set folder = "~/Mail"
-set mbox = "~/Mail/mbox"
-set record = "~/Mail/from"
-set spoolfile = "~/Mail/gmail"
 
-set sort = threads
-set sort_aux = reverse-last-date-received
-set editor = "/usr/bin/vim"
-set sendmail = "/usr/local/bin/proxychains4 /usr/local/bin/msmtp"
-# work with ~/.mailcap
-auto_view text/html
+set my_index_format="%5C %Z   %-15.90s %*  %20.25F %[%x,%X]"
+folder-hook . "set index_format='$my_index_format'"
 
+source ~/.mutt-rc/mutt_variables
 
-set charset = "utf-8"
-set send_charset = "utf-8"
-charset-hook ^us-ascii$ gb2312
-charset-hook ^big5$ big5
-charset-hook !utf-8 gb2312
-set assumed_charset = "gb2312"
-set rfc2047_parameters = yes
+set help = no
 
+set spoolfile = "+mbox"
+set record = "+sent"
+set postponed = "+draft"
+
+set sendmail = "/usr/local/bin/msmtp"
+set editor = "vim '+set tw=72'"
+
+# able to switch from account
+set envelope_from=yes
+# this is for multiple SMTP accounts.
+macro generic "<esc>1" ":set from = '$my_addr_work'"
+macro generic "<esc>2" ":set from= '$my_addr_gmail'"
+macro generic "<esc>3" ":set from= '$my_addr_sub'"
+macro generic "<esc>4" ":set from= '$my_addr_gsub'"
+macro pager "<esc>1" ":set from= '$my_addr_work'"
+macro pager "<esc>2" ":set from = '$my_addr_gmail'"
+macro pager "<esc>3" ":set from = '$my_addr_sub'"
+macro pager "<esc>4" ":set from = '$my_addr_gsub'"
+
+set from = "$my_addr_gmail"
+set use_from = yes
 set quit = ask-yes
 set header = no
 set indent_str = "> "
+set include = yes
+set askcc = yes
+set edit_headers
 
-set realname = "Wanlong Gao"
-set from = "Wanlong Gao <wanlong.gao@gmail.com>"
-set use_from = yes
+set sort = threads
+set sort_aux = reverse-last-date-received
 
-# able to switch from account
-set envelope_from = yes
-# Alt+2 switch to one mail
-macro generic "<esc>2" ":set from='Wanlong Gao <g@allenx.org>'"
-# Alt+1 switch to gmail
-macro generic "<esc>1" ":set from='Wanlong Gao <wanlong.gao@gmail.com>'"
+# for kernel mailing list
+# do not generate a Mail-Followup-To header
+set followup_to = no
+# do not respect the Mail-Followup-To header
+set honor_followup_to = no
 
-source ~/.mutt/mutt-colors-solarized-dark-256.muttrc
-source ~/.mutt/mutt-patch-highlighting.muttrc
+set reply_to = ask-no
+
+set smart_wrap = no
+set markers = no
+
+set rfc2047_parameters=yes
+set forward_format = "Fwd: %s"
+
+
+set charset = "utf-8"
+set locale="zh_CN.UTF-8"
+set send_charset = "utf-8"
+set assumed_charset="utf-8:cp936:iso-2022-jp"
+set attach_charset="cp936:utf-8:iso-2022-jp"
+charset-hook gb2312 cp936
+charset-hook gbk cp936
+charset-hook ^us-ascii$ gb2312
+charset-hook ^big5$ big5
+charset-hook !utf-8 gb2312
+
+
+set read_inc=1000
+set write_inc=1000
+
+set timeout=0
+set mail_check=5
+
+set mark_old=yes
+set collapse_unread
+
+set copy=yes			# save outgoing messages into $record
+
+folder-hook . "unignore User-Agent: X-Mailer:"
+#send-hook '~A' "ignore User-Agent: X-Mailer:"
+
+###
+# mail headers
+#
+ignore *
+unignore From: Date: Subject: To: Cc:
+unignore "Posted-to:"
+#unignore "X-Mailing-List:"
+unignore "User-Agent:"
+unignore "X-Mailer:"
+
+unhdr_order
+hdr_order "Date:" "To:" "Cc:" "From:" "Subject:" "User-Agent:" "X-Mailer:"
+
+###
+# attachments
+#
+# work with ~/.mailcap
+auto_view text/html
+auto_view image/*
+
+source ~/.mutt-rc/mutt-colors-solarized-dark-256.muttrc
+source ~/.mutt-rc/mutt-patch-highlighting.muttrc
+source ~/.mutt-rc/mutt_aliases
+
+set alias_file = "~/.mutt-rc/mutt_aliases"
+
+###
+# keys
+#
+
+bind generic H		top-page
+bind generic L		bottom-page
+
+bind generic j		next-entry
+bind generic k		previous-entry
+
+bind generic /		search
+bind generic <esc>/	search-reverse
+bind generic n		search-next
+bind generic N		search-opposite
+
+bind generic \Cn	next-page
+bind generic \Cp	previous-page
+
+bind generic \Cd	next-page
+bind generic \Cu	previous-page
+
+bind index gg		first-entry
+bind index G		last-entry
+
+bind index <esc>j	top-page
+bind index <esc>k	bottom-page
+
+bind index J		next-thread
+bind index K		previous-thread
+
+bind index \Cn		next-page
+bind index \Cp		previous-page
+
+bind index \Cd		next-page
+bind index \Cu		previous-page
+
+bind index n		search-next
+bind index N		search-opposite
+
+bind pager G 		bottom
+bind pager gg 		top
+bind pager J		skip-quoted
+bind pager j		next-line
+bind pager k		previous-line
+bind pager <down>	next-line
+bind pager <up>		previous-line
+bind pager \Cd		next-page
+bind pager \Cu		previous-page
+bind pager ,		next-undeleted
+bind pager .		previous-undeleted
+
+bind pager n		search-next
+bind pager N		search-opposite
+
+bind pager f		forward-message
+bind pager r		reply
+bind pager R		group-reply
+
+bind browser <Space>	select-entry
+bind browser <Return>	select-entry
+bind browser gg		first-entry
+bind browser G		last-entry

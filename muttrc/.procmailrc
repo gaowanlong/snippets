@@ -1,30 +1,58 @@
 PATH=$HOME/bin:/usr/bin:/usr/ucb:/bin:/usr/local/bin:.
 MAILDIR=$HOME/Mail
 DEFAULT=$MAILDIR/mbox
-LOGFILE=$MAILDIR/from
+LOGFILE=$MAILDIR/procmail.log
 LOCKFILE=$HOME/.lockmail
 
+# filter duplicates mails.
+#
+:0 Whc: msgid.lock
+| formail -D 8192000 msgid.cache
 
-:0
+:0 a:
+duplicates
+# end filter duplicates.
+
+:0 c
 * (^From|^TO|^CC).*wanlong.gao@gmail.com
-gmail
+gmail-to-me
+
+:0 c
+* (^From|^TO|^CC).*wanlong.gao@easystack.cn
+easystack-to-me
+
+:0 c
+* (^From|^TO|^CC).*@easystack.cn
+easystack-related
 
 :0
 * (^TO|^CC).*ltp-list
-LTP
+ml-ltp
 
 :0
 * (^TO|^CC).*ltp@lists.linux.it
-LTP
+ml-ltp
 
-:0
-* (^From|^TO|^CC).*g@allenx.org
-allenx
+:0:
+* (^TO|^CC).*kvm@vger.kernel.org
+ml-kvm
 
-:0
-* (^TO|^CC).*lengyuex@vip.qq.com
-qq
+:0:
+* (^TO|^CC).*libvirt-list@redhat.com
+ml-libvirt-list
 
-:0
-* .* mbox
-default
+:0:
+* (^TO|^CC).*libvir-list@redhat.com
+ml-libvirt-list
+
+:0:
+* (^TO|^CC).*virt-tools-list@redhat.com
+ml-virt-tools-list
+
+:0:
+* (^TO|^CC).*qemu-devel@nongnu.org
+ml-qemu-devel
+
+:0:
+* (^TO|^CC).*linux-kernel@vger.kernel.org
+ml-linux-kernel
