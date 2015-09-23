@@ -3,7 +3,8 @@ set my_addr_gmail = "Wanlong Gao <wanlong.gao@gmail.com>"
 set my_addr_sub = "Wanlong Gao <allen_kernel@163.com>"
 set my_addr_gsub = "Wanlong Gao <lengyuex@gmail.com>"
 
-reply-hook . 'set from = "$my_addr_gmail"'
+my_hdr Bcc: $my_addr_sub
+reply-hook '~A' 'set from = "$my_addr_gmail"'
 reply-hook '~C wanlong.gao@easystack.cn' 'set from = "$my_addr_work"'
 reply-hook '~C allen_kernel@163.com' 'set from = "$my_addr_sub"'
 reply-hook '~C wanlong.gao@gmail.com' 'set from = "$my_addr_gmail"'
