@@ -15,7 +15,7 @@ duplicates
 # end filter duplicates.
 
 :0 c
-* ^TOwanlong.gao@gmail.com
+* (^From:|^TO).*wanlong.gao@gmail.com
 {
   :0 c
   | $HOME/.mutt-rc/new-mail.sh
@@ -25,7 +25,7 @@ duplicates
 }
 
 :0 c
-* ^TOwanlong.gao@easystack.cn
+* (^From:|^TO).*wanlong.gao@easystack.cn
 {
   :0 c
   | $HOME/.mutt-rc/new-mail.sh
@@ -35,11 +35,7 @@ duplicates
 }
 
 :0 c
-* ^TO@easystack.cn
-easystack-related
-
-:0 c
-* ^From:.*@easystack.cn
+* (^From:|^TO).*@easystack.cn
 easystack-related
 
 :0

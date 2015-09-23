@@ -26,7 +26,7 @@ macro pager "<esc>2" ":set from = '$my_addr_gmail'"
 macro pager "<esc>3" ":set from = '$my_addr_sub'"
 macro pager "<esc>4" ":set from = '$my_addr_gsub'"
 
-set from = "$my_addr_gmail"
+set from = "$my_addr_work"
 set use_from = yes
 set quit = ask-yes
 set header = no
