@@ -5,3 +5,5 @@ alias lkml lkml <linux-kernel@vger.kernel.org>
 alias akpm Andrew Morton <akpm@linux-foundation.org>
 alias rusty.russell Rusty Russell <rusty@rustcorp.com.au>
 alias tejun.heo Tejun Heo <tj@kernel.org>
+alias allen_kernel allen_kernel@163.com
+alias wanlong.gao Wanlong Gao <wanlong.gao@gmail.com>

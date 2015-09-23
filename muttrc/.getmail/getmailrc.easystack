@@ -7,9 +7,9 @@ delete = false
 
 [retriever]
 type = SimplePOP3SSLRetriever
-server = pop.gmail.com
+server = pop.ym.163.com
 port = 995
-username = recent:wanlong.gao@gmail.com
+username = wanlong.gao@easystack.cn
 password = xxx
 
 [destination]

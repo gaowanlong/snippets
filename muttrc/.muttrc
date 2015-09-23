@@ -3,11 +3,11 @@ set folder = "~/Mail"
 set my_index_format="%5C %Z   %-15.90s %*  %20.25F %[%x,%X]"
 folder-hook . "set index_format='$my_index_format'"
 
-source ~/.mutt-rc/mutt_variables
+source ~/.mutt-rc/mutt-variables.muttrc
 
 set help = no
 
-set spoolfile = "+mbox"
+set spoolfile = "+easystack-to-me"
 set record = "+sent"
 set postponed = "+draft"
 
@@ -102,9 +102,9 @@ auto_view image/*
 #source ~/.mutt-rc/mutt-colors-solarized-dark-256.muttrc
 source ~/.mutt-rc/vombatidae.muttrc
 source ~/.mutt-rc/mutt-patch-highlighting.muttrc
-source ~/.mutt-rc/mutt_aliases
+source ~/.mutt-rc/mutt-aliases.muttrc
 
-set alias_file = "~/.mutt-rc/mutt_aliases"
+set alias_file = "~/.mutt-rc/mutt-aliases.muttrc"
 
 ###
 # keys

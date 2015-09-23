@@ -1,3 +1,4 @@
+# vim: filetype=muttrc
 # Mutt color file
 # Maintainer: Jon Häggblad <jon@haeggblad.com>
 # URL: http://www.haeggblad.com
@@ -11,20 +12,21 @@
 
 
 # --- vombatidae text colors ---
-#  color normal		color230      color234
-#  color message      	color230      color234 
+#color normal		color230      color234
+#color message      	color230      color234 
 
 # --- slightly less yellow text colors ---
-color normal		color253	color234 # mod
-# color normal		color253	color233 # mod
-#  color normal		color253	default # mod
+color normal		color253	color234# mod
+#color normal		color253	color233 # mod
+#color normal		color253	default # mod
 color indicator    	color230     	color238
 color status       	color101     	color16
 #  color tree         	color113      	color234 
 #  color tree         	color173      	color234 
 color tree         	color208      	color234 
 color signature    	color102      	color234 
-color message      	color253      	color234 
+#color message      	color253      	color234 
+color message		color253	default
 color attachment	color117      	color234 
 color error        	color30      	color234 
 color tilde        	color130     	color235 

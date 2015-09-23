@@ -1,23 +1,24 @@
+# vim: filetype=muttrc
 # Patch syntax highlighting                                                     
 #color   normal  white           default                                         
-color   body    brightwhite     default         ^[[:space:]].*                  
+#color   body    brightwhite     default         ^[[:space:]].*                  
 color   body    yellow          default         ^(diff).*                       
 #color   body    white           default         ^[\-\-\-].*                     
 #color   body    white           default         ^[\+\+\+].*                     
 #color   body    green           default         ^[\+].*                         
 #color   body    red             default         ^[\-].*                         
 #color   body    brightblue      default         [@@].*                          
-color   body    brightwhite     default         ^(\s).*                         
+#color   body    brightwhite     default         ^(\s).*                         
 color   body    cyan            default         ^(Signed-off-by).*
 color   body    cyan            default         ^(Docker-DCO-1.1-Signed-off-by).*
-color   body    brightwhite     default         ^(Cc)
+#color   body    brightwhite     default         ^(Cc)
 color   body    yellow          default         "^diff \-.*"
-color   body    brightwhite     default         "^index [a-f0-9].*"
+#color   body    brightwhite     default         "^index [a-f0-9].*"
 color   body    brightblue      default         "^---$"
 color   body    white           default         "^\-\-\- .*"
 color   body    white           default         "^[\+]{3} .*"
-color   body    green           default         "^[\+][^\+]+.*"
-color   body    red             default         "^\-[^\-]+.*"
+color   body    green           color234	"^[\+][^\+]+.*"
+color   body    red             color234	"^\-[^\-]+.*"
 color   body    brightblue      default         "^@@ .*"
 color   body    green           default         "LGTM"
 color   body    brightmagenta   default         "-- Commit Summary --"

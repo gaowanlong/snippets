@@ -4,6 +4,7 @@ DEFAULT=$MAILDIR/mbox
 LOGFILE=$MAILDIR/procmail.log
 LOCKFILE=$HOME/.lockmail
 
+
 # filter duplicates mails.
 #
 :0 Whc: msgid.lock
@@ -14,45 +15,69 @@ duplicates
 # end filter duplicates.
 
 :0 c
-* (^From|^TO|^CC).*wanlong.gao@gmail.com
-gmail-to-me
+* ^TOwanlong.gao@gmail.com
+{
+  :0 c
+  | $HOME/.mutt-rc/new-mail.sh
+
+  :0
+  gmail-to-me
+}
 
 :0 c
-* (^From|^TO|^CC).*wanlong.gao@easystack.cn
-easystack-to-me
+* ^TOwanlong.gao@easystack.cn
+{
+  :0 c
+  | $HOME/.mutt-rc/new-mail.sh
+
+  :0
+  easystack-to-me
+}
 
 :0 c
-* (^From|^TO|^CC).*@easystack.cn
+* ^TO@easystack.cn
+easystack-related
+
+:0 c
+* ^From:.*@easystack.cn
 easystack-related
 
 :0
-* (^TO|^CC).*ltp-list
+* ^TOltp-list
 ml-ltp
 
 :0
-* (^TO|^CC).*ltp@lists.linux.it
+* ^TOltp@lists.linux.it
 ml-ltp
 
 :0:
-* (^TO|^CC).*kvm@vger.kernel.org
+* ^TOkvm@vger.kernel.org
 ml-kvm
 
 :0:
-* (^TO|^CC).*libvirt-list@redhat.com
+* ^TOlibvirt-list@redhat.com
 ml-libvirt-list
 
 :0:
-* (^TO|^CC).*libvir-list@redhat.com
+* ^TOlibvir-list@redhat.com
 ml-libvirt-list
 
 :0:
-* (^TO|^CC).*virt-tools-list@redhat.com
+* ^TOvirt-tools-list@redhat.com
 ml-virt-tools-list
 
 :0:
-* (^TO|^CC).*qemu-devel@nongnu.org
+* ^TOqemu-devel@nongnu.org
 ml-qemu-devel
 
 :0:
-* (^TO|^CC).*linux-kernel@vger.kernel.org
+* ^TOvirtualization@lists.linux-foundation.org
+ml-virtualization
+
+:0:
+* ^TOxfs@oss.sgi.org
+ml-xfs
+
+:0:
+* ^TOlinux-kernel@vger.kernel.org
 ml-linux-kernel

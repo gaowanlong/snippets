@@ -10,10 +10,10 @@ type = SimplePOP3SSLRetriever
 server = pop.163.com
 port = 995
 username = allen_gmail@163.com
-password = xx
+password = xxx
 
 [destination]
 # use procmail to pick mail
 type = MDA_external
-path = /usr/local/bin/procmail
+path = /usr/bin/procmail
 unixfrom = true
