@@ -1,6 +1,6 @@
 set folder = "~/Mail"
 
-set my_index_format="%5C %Z   %-15.90s %*  %20.25F %[%x,%X]"
+set my_index_format="%5C %Z %20.20F  %-15.90s %* %[%x,%X]"
 folder-hook . "set index_format='$my_index_format'"
 
 source ~/.mutt-rc/mutt-variables.muttrc
@@ -36,7 +36,7 @@ set askcc = yes
 set edit_headers
 
 set sort = threads
-set sort_aux = reverse-last-date-received
+set sort_aux = reverse-last-date-sent
 
 # for kernel mailing list
 # do not generate a Mail-Followup-To header
