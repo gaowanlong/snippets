@@ -75,5 +75,13 @@ ml-virtualization
 ml-xfs
 
 :0:
+*^TOdpdk.org
+ml-dpdk
+
+:0:
+* ^TOlinux-rt-users@vger.kernel.org
+ml-linux-rt-users
+
+:0:
 * ^TOlinux-kernel@vger.kernel.org
 ml-linux-kernel
