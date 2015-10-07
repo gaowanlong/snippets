@@ -16,4 +16,7 @@ cp -av .getmail/getmail.sh ~/.getmail/getmail.sh
 rm -f ~/.getmail/getmailrc.*
 scp big:~/.getmail/getmailrc.* ~/.getmail/
 
+procmail_path=$(which procmail)
+sed -ie "s:/usr/bin/procmail:$procmail_path:" ~/.getmail/getmailrc.*
+
 scp big:~/.msmtprc ~/.msmtprc
