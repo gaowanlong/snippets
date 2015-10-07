@@ -23,11 +23,13 @@ macro generic "<esc>2" ":set from= '$my_addr_gmail'"
 macro generic "<esc>3" ":set from= '$my_addr_sub'"
 macro generic "<esc>4" ":set from= '$my_addr_gsub'"
 macro generic "<esc>5" ":set from= '$my_addr_msub'"
+macro generic "<esc>6" ":set from= '$my_addr_qsub'"
 macro pager "<esc>1" ":set from= '$my_addr_work'"
 macro pager "<esc>2" ":set from = '$my_addr_gmail'"
 macro pager "<esc>3" ":set from = '$my_addr_sub'"
 macro pager "<esc>4" ":set from = '$my_addr_gsub'"
 macro pager "<esc>5" ":set from = '$my_addr_msub'"
+macro pager "<esc>6" ":set from = '$my_addr_qsub'"
 
 set from = "$my_addr_work"
 set use_from = yes
