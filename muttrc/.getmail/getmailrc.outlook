@@ -1,0 +1,19 @@
+[options]
+verbose = 2
+# only get mail
+read_all = false
+# do not delete from server
+delete = false
+
+[retriever]
+type = SimplePOP3SSLRetriever
+server = pop-mail.outlook.com
+port = 995
+username = gaowanlong@outlook.com
+password = xxx
+
+[destination]
+# use procmail to pick mail
+type = MDA_external
+path = /usr/bin/procmail
+unixfrom = true

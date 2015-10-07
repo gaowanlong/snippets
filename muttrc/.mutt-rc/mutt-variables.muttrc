@@ -2,11 +2,14 @@ set my_addr_work = "Wanlong Gao <wanlong.gao@easystack.cn>"
 set my_addr_gmail = "Wanlong Gao <wanlong.gao@gmail.com>"
 set my_addr_sub = "Wanlong Gao <allen_kernel@163.com>"
 set my_addr_gsub = "Wanlong Gao <lengyuex@gmail.com>"
+set my_addr_msub = "Wanlong Gao <gaowanlong@outlook.com>"
 
 my_hdr Bcc: $my_addr_sub
 reply-hook '~A' 'set from = "$my_addr_work"'
 reply-hook '~C wanlong.gao@easystack.cn' 'set from = "$my_addr_work"'
 reply-hook '~C allen_kernel@163.com' 'set from = "$my_addr_sub"'
+reply-hook '~C lengyuex@gmail.com' 'set from = "$my_addr_gsub"'
+reply-hook '~C gaowanlong@outlook.com' 'set from = "$my_addr_msub"'
 reply-hook '~C wanlong.gao@gmail.com' 'set from = "$my_addr_gmail"'
 
 mailboxes = "+mbox"
