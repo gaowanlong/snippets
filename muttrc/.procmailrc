@@ -18,7 +18,7 @@ duplicates
 * (^From:|^TO).*wanlong.gao@gmail.com
 {
   :0 c
-  | $HOME/.mutt-rc/new-mail.sh
+  | $HOME/.mutt-rc/new-mail.sh >> $HOME/.mutt/new-mail.log
 
   :0
   gmail-to-me
@@ -28,7 +28,7 @@ duplicates
 * (^From:|^TO).*wanlong.gao@easystack.cn
 {
   :0 c
-  | $HOME/.mutt-rc/new-mail.sh > $HOME/.mutt/new-mail.log
+  | $HOME/.mutt-rc/new-mail.sh >> $HOME/.mutt/new-mail.log
 
   :0
   easystack-to-me
@@ -36,7 +36,13 @@ duplicates
 
 :0 c
 * (^From:|^TO).*@easystack.cn
-easystack-related
+{
+  :0 c
+  | $HOME/.mutt-rc/new-mail.sh >> $HOME/.mutt/new-mail.log
+
+  :0
+  easystack-related
+}
 
 :0
 * ^TOltp-list
