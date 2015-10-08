@@ -28,7 +28,7 @@ duplicates
 * (^From:|^TO).*wanlong.gao@easystack.cn
 {
   :0 c
-  | $HOME/.mutt-rc/new-mail.sh
+  | $HOME/.mutt-rc/new-mail.sh > $HOME/.mutt/new-mail.log
 
   :0
   easystack-to-me
