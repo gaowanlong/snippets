@@ -14,7 +14,7 @@ LOCKFILE=$HOME/.lockmail
 duplicates
 # end filter duplicates.
 
-:0 c
+:0:
 * (^From:|^TO).*wanlong.gao@gmail.com
 {
   :0 c
@@ -24,7 +24,7 @@ duplicates
   gmail-to-me
 }
 
-:0 c
+:0:
 * (^From:|^TO).*wanlong.gao@easystack.cn
 {
   :0 c
@@ -34,7 +34,7 @@ duplicates
   easystack-to-me
 }
 
-:0 c
+:0:
 * (^From:|^TO).*@easystack.cn
 {
   :0 c
