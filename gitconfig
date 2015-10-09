@@ -22,3 +22,5 @@
 	default = simple
 [diff]
 	renames = true
+[alias]
+	code-review = diff -p --no-prefix -U1000
