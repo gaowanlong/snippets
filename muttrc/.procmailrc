@@ -85,6 +85,15 @@ ml-xfs
 ml-dpdk
 
 :0:
+*^TOdiscuss@openvswitch.org
+ml-ovs
+
+:0:
+*^TOdev@openvswitch.org
+ml-ovs
+
+
+:0:
 * ^TOlinux-rt-users@vger.kernel.org
 ml-linux-rt-users
 
