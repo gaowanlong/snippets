@@ -20,5 +20,4 @@ v4.0-->v4.1-rc1...-->v4.1-rc8-->v4.2
 
 ## Patch path
 
-- subsystem maintainers ===> Linus
-- Andrew Morton ==> Linus
+![kernel-dev model](http://7xky0k.com1.z0.glb.clouddn.com/dev-model.png)
