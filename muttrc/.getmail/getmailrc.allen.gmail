@@ -15,5 +15,5 @@ password = xxx
 [destination]
 # use procmail to pick mail
 type = MDA_external
-path = /usr/bin/procmail
+path = /usr/local/bin/procmail
 unixfrom = true

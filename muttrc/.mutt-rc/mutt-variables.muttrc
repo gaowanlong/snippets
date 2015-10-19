@@ -5,7 +5,7 @@ set my_addr_gsub = "Wanlong Gao <lengyuex@gmail.com>"
 set my_addr_msub = "Wanlong Gao <gaowanlong@outlook.com>"
 set my_addr_qsub = "Wanlong Gao <allen.gmail@qq.com>"
 
-my_hdr Bcc: $my_addr_sub
+my_hdr Bcc: $my_addr_work
 reply-hook '~A' 'set from = "$my_addr_work"'
 reply-hook '~C wanlong.gao@easystack.cn' 'set from = "$my_addr_work"'
 reply-hook '~C allen_kernel@163.com' 'set from = "$my_addr_sub"'
