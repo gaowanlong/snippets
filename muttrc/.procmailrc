@@ -44,6 +44,10 @@ duplicates
   easystack-related
 }
 
+:0:
+* ^TOcfp@chinalsf.org
+ml-cfp
+
 :0
 * ^TOltp-list
 ml-ltp
