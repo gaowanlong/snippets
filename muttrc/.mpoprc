@@ -1,0 +1,55 @@
+defaults
+
+# Always use TLS.
+tls on
+keep on
+
+# Set a list of trusted CAs for TLS. You can use a system-wide default file,
+# as in this example, or download the root certificate of your CA and use that.
+#tls_trust_file /etc/ssl/certs/ca-certificates.crt
+tls_certcheck off
+tls_starttls off
+
+# Additionally, you should use the tls_crl_file command to check for revoked
+# certificates, but unfortunately getting revocation lists and keeping them
+# up to date is not straightforward.
+#tls_crl_file ~/.tls-crls
+
+# Deliver mail to an MBOX mail file:
+#delivery mbox ~/Mail/test
+# Deliver mail to a maildir folder:
+#delivery maildir ~/Mail/incoming
+# Deliver mail via procmail:
+delivery mda "/usr/local/bin/procmail -f '%F' -d $USER"
+# Deliver mail via the local SMTP server:
+#delivery mda "/usr/bin/msmtp --host=localhost --from='%F' -- $USER"
+# Deliver mail to an Exchange pickup directory:
+#delivery exchange c:\exchange\pickup
+
+account easystack
+host pop.ym.163.com
+port 995
+user wanlong.gao@easystack.cn
+password xxx
+
+account allen_kernel
+host pop.163.com
+port 995
+user allen_kernel@163.com
+password xxx
+
+account gmail
+host pop.gmail.com
+port 995
+user recent:wanlong.gao
+password xxx
+proxy_host 127.0.0.1
+proxy_port 1080
+
+account gmail2
+host pop.gmail.com
+port 995
+user recent:lengyuex
+password xxx
+proxy_host 127.0.0.1
+proxy_port 1080

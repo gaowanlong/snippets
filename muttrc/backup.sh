@@ -7,13 +7,11 @@
 
 rm -rf .??*
 
-mkdir -p .getmail
 mkdir -p .mutt-rc
 
-cp -av ~/.getmail/getmailrc.* .getmail/
-cp -av ~/.getmail/getmail.sh .getmail/
 cp -av ~/.procmailrc .
 
+cp -av ~/.mpoprc .
 cp -av ~/.msmtprc .
 
 cp -av ~/.muttrc .
