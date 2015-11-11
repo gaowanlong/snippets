@@ -96,9 +96,13 @@ ml-ovs
 *^TOdev@openvswitch.org
 ml-ovs
 
-:0 c:
+:0:
 * ^TOstable@vger.kernel.org
 ml-stable-kernel
+
+:0:
+* ^TOlinux-mm@kvack.org
+ml-linux-mm
 
 :0:
 * ^TOlinux-rt-users@vger.kernel.org

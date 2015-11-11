@@ -13,7 +13,7 @@ set postponed = "+draft"
 
 set sendmail = "/usr/local/bin/msmtp"
 set sendmail_wait = -1  # do not wait for mail delivery
-set editor = "vim '+set tw=72'"
+set editor = "vim '+set tw=0'"
 
 # able to switch from account
 set envelope_from=yes
@@ -135,8 +135,8 @@ bind generic \Cu	previous-page
 bind index gg		first-entry
 bind index G		last-entry
 
-bind index <esc>j	top-page
-bind index <esc>k	bottom-page
+bind index H		top-page
+bind index L		bottom-page
 
 bind index J		next-thread
 bind index K		previous-thread
