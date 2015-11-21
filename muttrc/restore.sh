@@ -11,6 +11,7 @@ cp -av .muttrc ~/.muttrc
 mkdir -p ~/.mutt-rc
 cp -av .mutt-rc/*.muttrc ~/.mutt-rc/
 cp -av .mutt-rc/new-mail.sh ~/.mutt-rc/new-mail.sh
+cp -av .mutt-rc/x-label-toggler ~/.mutt-rc/x-label-toggler
 cp -av .mailcap ~/.mailcap
 
 scp big:~/.msmtprc ~/.msmtprc

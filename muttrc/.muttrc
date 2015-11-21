@@ -41,7 +41,7 @@ set askcc = yes
 set edit_headers
 
 set sort = threads
-set sort_aux = reverse-last-date-sent
+set sort_aux = last-date-sent
 
 # for kernel mailing list
 # do not generate a Mail-Followup-To header
@@ -173,3 +173,5 @@ bind browser <Space>	select-entry
 bind browser <Return>	select-entry
 bind browser gg		first-entry
 bind browser G		last-entry
+
+source ~/.mutt-rc/mutt-tags.muttrc
