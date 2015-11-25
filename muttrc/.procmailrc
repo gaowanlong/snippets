@@ -73,6 +73,11 @@ ml-libvirt-list
 ml-virt-tools-list
 
 :0:
+* ^TOqemu-stable@nongnu.org
+ml-qemu-stable
+
+
+:0:
 * ^TOqemu-devel@nongnu.org
 ml-qemu-devel
 
@@ -97,8 +102,16 @@ ml-ovs
 ml-ovs
 
 :0:
+*^TOdev@openvswitch.com
+ml-ovs
+
+:0:
 * ^TOstable@vger.kernel.org
 ml-stable-kernel
+
+:0:
+* ^TOcgroups@vger.kernel.org
+ml-cgroups
 
 :0:
 * ^TOlinux-mm@kvack.org
