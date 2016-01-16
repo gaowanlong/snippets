@@ -1,8 +1,8 @@
 [user]
 	email		= wanlong.gao@gmail.com
-	name		= Wanlong Gao
+	name		= Allen Gao
 [sendemail]
-	from		= Wanlong Gao <wanlong.gao@gmail.com>
+	from		= Allen Gao <wanlong.gao@gmail.com>
 	smtpuser	= wanlong.gao
 	smtppass	=
 	smtpsslcertpath =
