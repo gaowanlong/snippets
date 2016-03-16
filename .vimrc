@@ -24,6 +24,9 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fatih/vim-go'
 Plugin 'chazy/cscope_maps'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'hynek/vim-python-pep8-indent'
 "
 "
 " " The following are examples of different formats supported.
@@ -70,7 +73,13 @@ let g:rehash256 = 1
 let g:airline_powerline_fonts = 1
 " set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 10
 " set guifont=Literation\ Mono\ Powerline\ 9
+" set guifont=Dejavu\ Sans\ Mono\ for\ Powerline\ 10
 set guifont=Dejavu\ Sans\ Mono\ for\ Powerline\ 9
+" set guifont=Sauce\ Code\ Powerline\ 9
+" set guifont=Anonymice\ Powerline\ 9
+" set guifont=Anonymice\ Powerline\ 9
+" set guifont=Monofur\ for\ Powerline\ 9
+" set guifont=Cousine\ for\ Powerline\ 9
 let g:airline_detect_paste=1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -96,6 +105,19 @@ let g:airline#extensions#tagbar#flags = 'f'
 " ctrlp setup
 let g:ctrlp_working_path_mode = 'a'
 
+" vim-go
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" vim-markdown
+let g:vim_markdown_folding_disabled=1
+let g:vim_markdown_math=1
+let g:vim_markdown_frontmatter=1
+
+
 " normal setup
 set gcr=a:block-blinkon0
 set nu
@@ -112,6 +134,9 @@ endif
 set tw=0 " do not break my line
 set colorcolumn=80
 "set spell " enable spell check, disable by set nospell
+
+" for mac slow scroll
+set ttyfast
 
 " Just set encodings for chinese
 set fileencodings=utf-8,chinese
