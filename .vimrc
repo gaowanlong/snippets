@@ -136,6 +136,7 @@ set colorcolumn=80
 "set spell " enable spell check, disable by set nospell
 
 " for mac slow scroll
+set lazyredraw
 set ttyfast
 
 " Just set encodings for chinese
