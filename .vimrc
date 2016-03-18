@@ -13,7 +13,7 @@ filetype off                  " required
 "
 " " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-Plugin 'neilagabriel/vim-geeknote'
+" Plugin 'neilagabriel/vim-geeknote'
 Plugin 'bling/vim-airline'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/winmanager--Fox'
