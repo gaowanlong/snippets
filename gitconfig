@@ -1,12 +1,11 @@
 [user]
-	email		= wanlong.gao@gmail.com
+	email		= wanlong.gao@easystack.cn
 	name		= Allen Gao
 [sendemail]
-	from		= Allen Gao <wanlong.gao@gmail.com>
-	smtpuser	= wanlong.gao
-	smtppass	=
-	smtpsslcertpath =
-	smtpserver	=
+	from		= Allen Gao <wanlong.gao@easystack.cn>
+	smtpuser	= wanlong.gao@easystack.cn
+	smtppass	= 
+	smtpserver	= smtp.ym.163.com
 	smtpencryption	= tls
 	envelopesender	= auto
 	suppresscc	= author
@@ -24,3 +23,5 @@
 	renames = true
 [alias]
 	code-review = diff -p --no-prefix -U1000
+[core]
+	editor = vim
