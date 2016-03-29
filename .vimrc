@@ -102,6 +102,9 @@ let g:airline#extensions#tabline#close_symbol = 'X'
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#tagbar#flags = 'f'
 
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+
 " ctrlp setup
 let g:ctrlp_working_path_mode = 'a'
 
