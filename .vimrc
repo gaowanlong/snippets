@@ -62,7 +62,7 @@ filetype off                  " required
 " " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 " Plugin 'neilagabriel/vim-geeknote'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'tomasr/molokai'
 Plugin 'vim-scripts/winmanager--Fox'
 Plugin 'vim-scripts/taglist.vim'
@@ -75,6 +75,8 @@ Plugin 'chazy/cscope_maps'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
+"Plugin 'Rip-Rip/clang_complete'
+Plugin 'mhinz/vim-grepper'
 "
 "
 " " The following are examples of different formats supported.
@@ -167,6 +169,10 @@ let g:go_highlight_build_constraints = 1
 let g:vim_markdown_folding_disabled=1
 let g:vim_markdown_math=1
 let g:vim_markdown_frontmatter=1
+
+" grepper
+nmap <leader>g :Grepper -tool git -open -switch -highlight -cword -noprompt<cr>
+nmap <leader>G :Grepper -tool git -open -switch -highlight -query<cr>
 
 
 " normal setup
