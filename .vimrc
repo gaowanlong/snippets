@@ -26,6 +26,7 @@ if has("autocmd")
   " start with spec file template
   autocmd BufNewFile *.spec 0r /usr/share/vim/vimfiles/template.spec
   augroup END
+  autocmd FileType cpp setlocal shiftwidth=2 tabstop=8 smarttab
 endif
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -191,6 +192,10 @@ endif
 set tw=0 " do not break my line
 set colorcolumn=80
 "set spell " enable spell check, disable by set nospell
+
+" show lists
+set listchars=eol:$,tab:<-,trail:~,extends:>,precedes:<
+set list
 
 " for mac slow scroll
 set lazyredraw
