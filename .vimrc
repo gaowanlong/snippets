@@ -78,6 +78,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'hynek/vim-python-pep8-indent'
 "Plugin 'Rip-Rip/clang_complete'
 Plugin 'mhinz/vim-grepper'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 "
 "
 " " The following are examples of different formats supported.
@@ -174,6 +175,11 @@ let g:vim_markdown_frontmatter=1
 " grepper
 nmap <leader>g :Grepper -tool git -open -switch -highlight -cword -noprompt<cr>
 nmap <leader>G :Grepper -tool git -open -switch -highlight -query<cr>
+
+
+" vim cpp inhance
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
 
 
 " normal setup
