@@ -61,7 +61,7 @@ filetype off                  " required
 " "call vundle#begin('~/some/path/here')
 "
 " " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'Vundle/Vundle.vim'
 " Plugin 'neilagabriel/vim-geeknote'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tomasr/molokai'
@@ -79,6 +79,8 @@ Plugin 'hynek/vim-python-pep8-indent'
 "Plugin 'Rip-Rip/clang_complete'
 Plugin 'mhinz/vim-grepper'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'morhetz/gruvbox'
+Plugin 'gaowanlong/delimitMate'
 "
 "
 " " The following are examples of different formats supported.
@@ -209,3 +211,4 @@ set ttyfast
 
 " Just set encodings for chinese
 set fileencodings=utf-8,chinese
+inoremap <C-l> <Right>

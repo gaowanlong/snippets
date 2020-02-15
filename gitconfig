@@ -1,11 +1,11 @@
 [user]
-	email		= wanlong.gao@easystack.cn
-	name		= Allen Gao
+	email		= wanlong.gao@gmail.com
+	name		= Gao Wanlong
 [sendemail]
-	from		= Allen Gao <wanlong.gao@easystack.cn>
-	smtpuser	= wanlong.gao@easystack.cn
+	from		= Gao Wanlong <wanlong.gao@gmail.com>
+	smtpuser	= wanlong.gao@gmail.com
 	smtppass	= 
-	smtpserver	= smtp.ym.163.com
+	smtpserver	= 
 	smtpencryption	= tls
 	envelopesender	= auto
 	suppresscc	= author
