@@ -1,5 +1,5 @@
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
-   set fileencodings=ucs-bom,utf-8,latin1
+   set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 endif
 
 set bs=indent,eol,start		" allow backspacing over everything in insert mode
